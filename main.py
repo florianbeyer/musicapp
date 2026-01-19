@@ -666,6 +666,8 @@ async def root():
                 padding: 2rem;
                 border-radius: 20px;
                 max-width: 500px;
+                max-height: 90vh;
+                overflow-y: auto;
                 border: 3px solid #00fff2;
                 box-shadow: 0 0 50px rgba(0, 255, 242, 0.5);
                 animation: slideIn 0.5s ease;
@@ -725,8 +727,31 @@ async def root():
                 border: 4px solid #8000ff;
                 box-shadow: 0 0 60px rgba(128, 0, 255, 0.6), 0 0 100px rgba(255, 0, 222, 0.4);
                 animation: slideIn 0.5s ease, pulse 3s infinite;
-                max-height: 80vh;
+                max-height: 90vh;
                 overflow-y: auto;
+            }
+            
+            /* Custom Scrollbar für Modals */
+            .help-content::-webkit-scrollbar,
+            .info-content::-webkit-scrollbar {
+                width: 10px;
+            }
+            
+            .help-content::-webkit-scrollbar-track,
+            .info-content::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 10px;
+            }
+            
+            .help-content::-webkit-scrollbar-thumb,
+            .info-content::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, #ff00de, #00fff2);
+                border-radius: 10px;
+            }
+            
+            .help-content::-webkit-scrollbar-thumb:hover,
+            .info-content::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, #ff6b00, #8000ff);
             }
             
             .info-content h2 {
